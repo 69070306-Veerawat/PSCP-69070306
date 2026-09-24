@@ -15,7 +15,7 @@ If AI was used for this learning-log-required problem, also complete `ai_reflect
 OJ problem number/title:
 
 ```text
-OJ2996 - สลับตัวอักษร
+OJ3293 - [LEARNING LOGS] BigFrame
 ```
 
 OJ submission ID, if submitted:
@@ -33,7 +33,7 @@ Pass
 Independent time spent on this problem:
 
 ```text
-0-15 minutes
+15-30 minutes
 ```
 
 Choose one:
@@ -73,13 +73,9 @@ Also explain the input, output, and important constraints.
 If you do not fully understand the problem yet, write what you currently understand. Your understanding may be incomplete or incorrect, but you must make a genuine attempt.
 
 ```text
-ให้สลับตัวอักษรจากหลังมาหน้า
-input:
-1 string
-output:
-input ที่เรียงตัวอักษรจากหลังมาหน้า
-constraint:
-input ที่ได้มาจะมีเเค่5ตัวอักษร เเละต้องตอบเป๊นตัวพิมพ์เล็กเท่านั้น
+input: 5 word
+output: word surround by box with length scale with longest word
+constraint: bow length scale with longest word
 ```
 
 ---
@@ -99,8 +95,9 @@ This can be rough. It may be incomplete or different from your final solution.
 You may write pseudocode, a flowchart idea, or step-by-step thinking.
 
 ```text
-step1 รับอินพุทให้เป็นตัวพิมพ์เล็ก
-Step 2 เขียน for loop(5 loop) ให้ print เเบบ end="" เเละเริ่มจากindexตัวท้าย 
+s1: receive input
+s2: find longest word
+s3: print bow frame withj word inside it
 ```
 
 ---
@@ -120,7 +117,7 @@ Do not copy AI's explanation.
 Do not copy another person's explanation.
 
 ```text
-วิธีสุดท้ายเปลี่ยนไปจากแผนแรก ใช้for loop เเบบ 5 ครั้งเพราะโจทย์กำหนดให้ เเละให้print จากข้างหลังสุด โดยใช้index[count] โดยกำหนดให้ count = -1 เเละทุกลูป จะ count -= 1  
+same as original plan
 ```
 
 ---
@@ -140,25 +137,41 @@ If the input or output has many lines, write them inside the text blocks.
 Why I chose this case:
 
 ```text
-ลองว่าย้อนกลับรึเปล่า
+check very long number
 ```
 
 Input:
 
 ```text
-12345
+111111111111111111111111111111
+2
+3
+4
+5
 ```
 
 Expected output:
 
 ```text
-54321
+**********************************
+* 111111111111111111111111111111 *
+* 2                              *
+* 3                              *
+* 4                              *
+* 5                              *
+**********************************
 ```
 
 Actual output:
 
 ```text
-54321
+**********************************
+* 111111111111111111111111111111 *
+* 2                              *
+* 3                              *
+* 4                              *
+* 5                              *
+**********************************
 ```
 
 Result:
@@ -172,26 +185,41 @@ Pass
 Why I chose this case:
 
 ```text
-มีตัวพืมพ์ใหญ่ตัวเล็กเเละเลข 
+check one letter
 ```
 
 Input:
 
 ```text
-O1k2J
+w
+w
+w
+w
+w
 ```
 
 Expected output:
 
 ```text
-j2k1o
+*****
+* w *
+* w *
+* w *
+* w *
+* w *
+*****
 ```
 
 Actual output:
 
 ```text
-j2k1o
-
+*****
+* w *
+* w *
+* w *
+* w *
+* w *
+*****
 ```
 
 Result:
@@ -205,25 +233,41 @@ Pass
 Why I chose this case:
 
 ```text
-มีตัวพืมพ์ใหญ่ตัวเล็กเเละเลข 
+check with spacebar
 ```
 
 Input:
 
 ```text
-Happy
+1                    
+d
+d
+d
+d
 ```
 
 Expected output:
 
 ```text
-yppah
+*****
+* 1 *
+* d *
+* d *
+* d *
+* d *
+*****
 ```
 
 Actual output:
 
 ```text
-yppah
+*****
+* 1 *
+* d *
+* d *
+* d *
+* d *
+*****
 ```
 
 Result:
